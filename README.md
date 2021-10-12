@@ -64,11 +64,11 @@ The code in this repo uses the following folder hierarchy:
 ```
 where:
 - **Environment**: Each environment represents an Azure subscription, like `daily`, `staging`, `production` etc. Environment level variables are defined in `env.hcl`.
-- **Site**: Typically, site is a region within one particualar subscription, there is also some exceptions, like 2 sites are both in the same region but for different use cases. Site level variables are defined in `site.hcl`.
+- **Site**: Typically, site is a region within one particular subscription, there is also some exceptions, like 2 sites are both in the same region but for different use cases. Site level variables are defined in `site.hcl`.
 - **Resource**: Resource is a single or a collection of Azure resources, like resource group/AKS cluster etc.
 
 ## Environments vs Modules
-Environments shoud only contain variable definitions for different environments. All common configurations like provider/backend are in the root `terragrunt.hcl`, it makes Terraform code DRY.
+Environments should only contain variable definitions for different environments. All common configurations like provider/backend are in the root `terragrunt.hcl`, it makes Terraform code DRY.
 
 While, modules, is the actual Terraform module for one particular resource.
 
